@@ -10,24 +10,15 @@
 <head>
   <meta charset="UTF-8">
     <title>Title</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-        body {
-            color: #000;
-            transition: background-color 0.3s, color 0.3s;
-          text-align: center;
-        }
-        .dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-  </style>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dark-mod.css">
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/darkmode.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/forum/home">누추한 게시판</a>
+    <a class="navbar-brand" href="/home">누추한 게시판</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,7 +28,7 @@
           <a class="nav-link disabled" aria-disabled="true">출석체크</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/forum/list">게시판</a>
+          <a class="nav-link active" aria-current="page" href="/list">게시판</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">준비중</a>
@@ -47,15 +38,5 @@
   </div>
 </nav>
 <h1>준비중입니다.</h1>
-<script>
-         // 페이지가 로드될 때 저장된 테마 적용
-         document.addEventListener('DOMContentLoaded', () => {
-            const darkMode = localStorage.getItem('dark-mode') === 'true';
-            if (darkMode) {
-                document.body.classList.add('dark-mode');
-            }
-        });
-
-    </script>
 </body>
 </html>

@@ -10,8 +10,10 @@
 <head>
   <meta charset="UTF-8">
     <title>${forum.title}</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dark-mod.css">
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/darkmode.js"></script>
   <style>
         body {
             color: #000;
@@ -50,9 +52,7 @@
                 width: 300px;
             }
         }
-        #right {
-            float: left;
-        }
+
         img {
             margin-bottom: 30px;
         }
@@ -62,14 +62,14 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/forum/home">누추한 게시판</a>
+    <a class="navbar-brand" href="/home">누추한 게시판</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/forum/check">출석체크</a>
+          <a class="nav-link active" aria-current="page" href="/check">출석체크</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">게시판</a>
@@ -94,10 +94,10 @@
 </div>
     <button type="button" class="btn btn-outline-info mb-3" data-bs-toggle="collapse" style="width: 60px; float:right; margin: 10px 10px"
 		data-bs-target="#updateForm" aria-controls="updateForm">수정</button>
-    <a href="/forum/list"><button style="float: right; width: 60px; margin: 10px 0px" type="submit" class="btn btn-outline-info mb-3" data-bs-toggle="collapse">목록</button></a>
+    <a href="/list"><button style="float: right; width: 60px; margin: 10px 0px" type="submit" class="btn btn-outline-info mb-3" data-bs-toggle="collapse">목록</button></a>
 <div class="collapse" id="updateForm">
 			<div class="card card-body">
-				<form method="post" action="/forum/update" enctype="multipart/form-data">
+				<form method="post" action="/update" enctype="multipart/form-data">
                     <input type="hidden" name="cid" value="${forum.cid}">
 					<label for="title" class="form-label">제목</label>
   					<input type="text" class="form-control" id="title" name="title" />
